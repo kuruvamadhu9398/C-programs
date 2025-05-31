@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+	char str[]="HelloWorld";
+	int s=sizeof(str)-1;
+	int k=3;
+	for(int i=0;i<s;i=i+k)
+	{
+		int l=i;
+		int r=(i+k-1<s-1)?(i+k-1 ):(s-1);
+	
+		while(l<r)
+		{
+			int temp=str[l];
+			str[l]=str[r];
+			str[r]=temp;
+			l++;
+			r--;
+		}
+	}
+	printf("%s ",str);
+}
